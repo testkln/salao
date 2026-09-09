@@ -14,19 +14,33 @@
 
 <style>
 
+/* ==================================================
+   PALETA — CREME / OFF-WHITE / BEGE / GRAFITE LEVE
+================================================== */
+
 :root {
-    --off-white: #F4F1EC;
-    --cream: #E9E3DA;
-    --beige: #D6C8B8;
-    --beige-strong: #BDA991;
-    --warm-gray: #8A837A;
-    --warm-gray-light: #C8C1B8;
-    --graphite: #353330;
-    --dark: #292825;
-    --black: #1D1C1A;
+    --off-white: #F8F5F0;
+    --cream: #F1ECE4;
+
+    --beige: #E3D7C8;
+    --beige-strong: #CDB9A2;
+
+    --warm-gray: #9B9389;
+    --warm-gray-light: #CFC7BD;
+
+    --graphite: #625D57;
+    --dark: #4A4641;
+    --black: #3B3834;
+
     --white: #FFFFFF;
-    --border: #CEC7BE;
+
+    --border: #DED6CC;
 }
+
+
+/* ==================================================
+   RESET
+================================================== */
 
 * {
     margin: 0;
@@ -41,9 +55,13 @@ html {
 
 body {
     margin: 0;
+
     background: var(--off-white);
+
     color: var(--graphite);
+
     font-family: "DM Sans", Arial, sans-serif;
+
     overflow-x: hidden;
 }
 
@@ -53,11 +71,14 @@ a {
 }
 
 
-/* ================= HEADER ================= */
+/* ==================================================
+   HEADER
+================================================== */
 
 header {
     width: 100%;
     height: 78px;
+
     padding: 0 6%;
 
     display: flex;
@@ -66,9 +87,11 @@ header {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
-    background: rgba(244, 241, 236, 0.96);
+    background: rgba(248, 245, 240, 0.96);
+
     backdrop-filter: blur(14px);
 
     border-bottom: 1px solid var(--border);
@@ -76,22 +99,28 @@ header {
 
 .brand {
     color: var(--black);
+
     font-size: 26px;
     font-weight: 600;
+
     letter-spacing: 6px;
 }
 
 nav {
     display: flex;
+
     gap: 32px;
 
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 }
 
 nav a {
     color: var(--graphite);
+
     transition: .25s;
 }
 
@@ -100,32 +129,40 @@ nav a:hover {
 }
 
 
-/* ================= BOTÕES ================= */
+/* ==================================================
+   BOTÕES
+================================================== */
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 14px 24px;
 
-    background: var(--graphite);
+    background: var(--dark);
+
     color: var(--white);
 
-    border: 1px solid var(--graphite);
+    border: 1px solid var(--dark);
 
     font-size: 11px;
+
     font-weight: 500;
 
     text-transform: uppercase;
+
     letter-spacing: 1.3px;
 
     transition: .25s;
 }
 
 .btn:hover {
-    background: var(--black);
-    border-color: var(--black);
+    background: var(--graphite);
+
+    border-color: var(--graphite);
+
     transform: translateY(-2px);
 }
 
@@ -134,7 +171,9 @@ nav a:hover {
 }
 
 
-/* ================= HERO ================= */
+/* ==================================================
+   HERO
+================================================== */
 
 .hero {
     min-height: calc(100vh - 78px);
@@ -142,6 +181,7 @@ nav a:hover {
     position: relative;
 
     display: flex;
+
     align-items: center;
 
     background:
@@ -153,23 +193,27 @@ nav a:hover {
 
 .hero::after {
     content: "";
+
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             90deg,
-            rgba(29,28,26,.72),
-            rgba(29,28,26,.30),
-            rgba(29,28,26,.08)
+            rgba(45, 42, 38, .68),
+            rgba(45, 42, 38, .28),
+            rgba(45, 42, 38, .08)
         );
 }
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
+
     max-width: 900px;
 
     padding: 8%;
@@ -178,10 +222,12 @@ nav a:hover {
 .hero-label {
     margin-bottom: 22px;
 
-    color: #EEE9E2;
+    color: #F4EFE8;
 
     font-size: 10px;
+
     font-weight: 600;
+
     letter-spacing: 3px;
 }
 
@@ -191,10 +237,12 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: clamp(56px, 8vw, 108px);
+
     font-weight: 500;
 
     line-height: .96;
-    color: #fff;
+
+    color: #FFFFFF;
 }
 
 .hero h1 em {
@@ -206,43 +254,53 @@ nav a:hover {
 
     margin-bottom: 34px;
 
-    color: #F1ECE5;
+    color: #F4F0EA;
 
     font-size: 18px;
+
     line-height: 1.65;
 }
 
 .hero-actions {
     display: flex;
+
     align-items: center;
+
     gap: 28px;
 }
 
 .hero .btn {
     background: var(--off-white);
-    color: var(--graphite);
+
+    color: var(--dark);
+
     border-color: var(--off-white);
 }
 
 .hero .btn:hover {
     background: var(--beige);
+
     border-color: var(--beige);
 }
 
 .hero-link {
-    color: #fff;
+    color: #FFFFFF;
 
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.3px;
 
     padding-bottom: 5px;
 
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #FFFFFF;
 }
 
 
-/* ================= SEÇÕES ================= */
+/* ==================================================
+   SEÇÕES
+================================================== */
 
 .section {
     padding: 115px 8%;
@@ -254,14 +312,17 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 10px;
+
     font-weight: 600;
 
     letter-spacing: 3px;
+
     text-transform: uppercase;
 }
 
 .section-top {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
@@ -278,6 +339,7 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-weight: 500;
+
     line-height: .98;
 
     color: var(--graphite);
@@ -300,11 +362,14 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 16px;
+
     line-height: 1.85;
 }
 
 
-/* ================= SERVIÇOS ================= */
+/* ==================================================
+   SERVIÇOS
+================================================== */
 
 .services-section {
     background: var(--cream);
@@ -312,6 +377,7 @@ nav a:hover {
 
 .services {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 
     border: 1px solid var(--border);
@@ -343,6 +409,7 @@ nav a:hover {
     color: var(--beige-strong);
 
     font-size: 11px;
+
     letter-spacing: 1px;
 }
 
@@ -352,6 +419,7 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: 31px;
+
     font-weight: 500;
 
     color: var(--graphite);
@@ -361,14 +429,18 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 14px;
+
     line-height: 1.7;
 }
 
 
-/* ================= SOBRE ================= */
+/* ==================================================
+   SOBRE
+================================================== */
 
 .about {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     background: var(--off-white);
@@ -386,7 +458,9 @@ nav a:hover {
     padding: 11%;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 
     background: var(--beige);
@@ -394,6 +468,7 @@ nav a:hover {
 
 .about h2 {
     font-size: clamp(48px, 5.5vw, 75px);
+
     margin-bottom: 30px;
 }
 
@@ -405,16 +480,20 @@ nav a:hover {
     color: var(--graphite);
 
     font-size: 15px;
+
     line-height: 1.85;
 }
 
 .about-content .btn {
     align-self: flex-start;
+
     margin-top: 12px;
 }
 
 
-/* ================= GALERIA ================= */
+/* ==================================================
+   GALERIA
+================================================== */
 
 .gallery-section {
     background: var(--off-white);
@@ -422,10 +501,13 @@ nav a:hover {
 
 .gallery-header {
     text-align: center;
+
     margin-bottom: 65px;
 }
 
 .gallery-header h2 {
+    color: var(--graphite);
+
     font-size: clamp(48px, 6vw, 76px);
 }
 
@@ -443,19 +525,21 @@ nav a:hover {
     position: relative;
 
     display: flex;
+
     align-items: flex-end;
 
     padding: 25px;
 
     overflow: hidden;
 
-    color: #fff;
+    color: #FFFFFF;
 
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: 27px;
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -463,21 +547,23 @@ nav a:hover {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
         linear-gradient(
             to top,
-            rgba(29,28,26,.58),
+            rgba(45, 42, 38, .50),
             transparent 55%
         );
 }
 
 .gallery-item span {
     position: relative;
+
     z-index: 2;
 
-    color: #fff;
+    color: #FFFFFF;
 }
 
 
@@ -489,8 +575,7 @@ nav a:hover {
 }
 
 
-/* TRANSFORMAÇÃO
-   Foto específica de cabelo/salão */
+/* TRANSFORMAÇÃO */
 
 .gallery-2 {
     background-image:
@@ -506,14 +591,16 @@ nav a:hover {
 }
 
 
-/* ================= CTA ================= */
+/* ==================================================
+   CTA
+================================================== */
 
 .cta {
     padding: 125px 8%;
 
     text-align: center;
 
-    background: var(--graphite);
+    background: var(--dark);
 
     color: var(--off-white);
 
@@ -539,7 +626,7 @@ nav a:hover {
 .cta .btn {
     background: var(--off-white);
 
-    color: var(--graphite);
+    color: var(--dark);
 
     border-color: var(--off-white);
 }
@@ -551,7 +638,9 @@ nav a:hover {
 }
 
 
-/* ================= CONTATO ================= */
+/* ==================================================
+   CONTATO
+================================================== */
 
 .contact {
     padding: 115px 8%;
@@ -602,7 +691,9 @@ nav a:hover {
 }
 
 
-/* ================= FOOTER ================= */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer {
     padding: 30px 8%;
@@ -610,9 +701,10 @@ footer {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
-    background: var(--dark);
+    background: #5A554F;
 
     color: var(--warm-gray-light);
 
@@ -621,16 +713,20 @@ footer {
 
 footer strong {
     color: var(--off-white);
+
     letter-spacing: 4px;
 }
 
 
-/* ================= MOBILE ================= */
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 800px) {
 
     header {
         height: 70px;
+
         padding: 0 5%;
     }
 
@@ -660,7 +756,9 @@ footer strong {
 
     .hero-actions {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 20px;
     }
 
@@ -684,6 +782,7 @@ footer strong {
         min-height: auto;
 
         border-right: 0;
+
         border-bottom: 1px solid var(--border);
     }
 
@@ -711,6 +810,7 @@ footer strong {
         padding: 25px 7%;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 12px;
@@ -725,7 +825,9 @@ footer strong {
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header>
 
@@ -765,7 +867,9 @@ footer strong {
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section id="inicio" class="hero">
 
@@ -810,7 +914,9 @@ footer strong {
 </section>
 
 
-<!-- ================= SERVIÇOS ================= -->
+<!-- ==================================================
+     SERVIÇOS
+================================================== -->
 
 <section id="servicos" class="section services-section">
 
@@ -913,7 +1019,9 @@ footer strong {
 </section>
 
 
-<!-- ================= SOBRE ================= -->
+<!-- ==================================================
+     SOBRE
+================================================== -->
 
 <section id="sobre" class="about">
 
@@ -958,7 +1066,9 @@ footer strong {
 </section>
 
 
-<!-- ================= GALERIA ================= -->
+<!-- ==================================================
+     GALERIA
+================================================== -->
 
 <section id="galeria" class="section gallery-section">
 
@@ -987,8 +1097,6 @@ footer strong {
         </div>
 
 
-        <!-- FOTO DE TRANSFORMAÇÃO CORRIGIDA -->
-
         <div class="gallery-item gallery-2">
 
             <span>
@@ -1011,7 +1119,9 @@ footer strong {
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- ==================================================
+     CTA
+================================================== -->
 
 <section class="cta">
 
@@ -1036,7 +1146,9 @@ footer strong {
 </section>
 
 
-<!-- ================= CONTATO ================= -->
+<!-- ==================================================
+     CONTATO
+================================================== -->
 
 <section id="contato" class="contact">
 
@@ -1105,7 +1217,9 @@ footer strong {
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
