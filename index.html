@@ -13,18 +13,17 @@
 <style>
 
 /* =====================================================
-   CORES
+   PALETA NEUTRA
 ===================================================== */
 
 :root {
     --white: #ffffff;
-    --off-white: #f7f7f5;
-    --soft: #eeeeeb;
-    --black: #171717;
-    --dark: #222222;
-    --gray: #707070;
-    --light-gray: #999999;
-    --line: #dededb;
+    --cream: #f5f3ef;
+    --cream-2: #ebe8e2;
+    --gray-light: #d8d5cf;
+    --gray: #77736d;
+    --gray-dark: #46433f;
+    --black: #181716;
 }
 
 
@@ -51,8 +50,8 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 
@@ -78,31 +77,27 @@ header {
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--gray-light);
 }
 
 .brand {
-    color: var(--black);
-
     font-size: 26px;
     font-weight: 600;
-
     letter-spacing: 6px;
+    color: var(--black);
 }
 
 nav {
     display: flex;
-    gap: 32px;
+    gap: 30px;
 
     font-size: 11px;
-
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 nav a {
-    color: var(--dark);
-
+    color: var(--gray-dark);
     transition: .2s;
 }
 
@@ -138,9 +133,8 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #3a3a3a;
-    border-color: #3a3a3a;
-
+    background: var(--gray-dark);
+    border-color: var(--gray-dark);
     transform: translateY(-2px);
 }
 
@@ -177,8 +171,8 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.15)
+            rgba(15,15,15,.65),
+            rgba(15,15,15,.18)
         );
 }
 
@@ -243,13 +237,13 @@ nav a:hover {
 
 .hero .btn {
     background: #fff;
-    color: #111;
+    color: var(--black);
     border-color: #fff;
 }
 
 .hero .btn:hover {
-    background: #eeeeee;
-    border-color: #eeeeee;
+    background: #eee;
+    border-color: #eee;
 }
 
 .hero-link {
@@ -273,18 +267,17 @@ nav a:hover {
 
 .section {
     padding: 115px 8%;
-
     background: var(--white);
 }
 
-.section:nth-of-type(2) {
-    background: var(--off-white);
+.services-section {
+    background: var(--cream);
 }
 
 .kicker {
     margin-bottom: 20px;
 
-    color: var(--light-gray);
+    color: var(--gray);
 
     font-size: 10px;
     font-weight: 600;
@@ -351,7 +344,7 @@ nav a:hover {
 
     grid-template-columns: repeat(4, 1fr);
 
-    border: 1px solid var(--line);
+    border: 1px solid var(--gray-light);
 
     background: var(--white);
 }
@@ -363,13 +356,13 @@ nav a:hover {
 
     background: var(--white);
 
-    border-right: 1px solid var(--line);
+    border-right: 1px solid var(--gray-light);
 
     transition: .25s;
 }
 
 .service:hover {
-    background: #fafafa;
+    background: #faf9f7;
 }
 
 .service:last-child {
@@ -377,7 +370,7 @@ nav a:hover {
 }
 
 .service-number {
-    color: var(--light-gray);
+    color: var(--gray);
 
     font-size: 11px;
 
@@ -434,7 +427,7 @@ nav a:hover {
 
     justify-content: center;
 
-    background: var(--off-white);
+    background: var(--cream);
 }
 
 .about h2 {
@@ -448,7 +441,7 @@ nav a:hover {
 
     margin-bottom: 18px;
 
-    color: var(--gray);
+    color: var(--gray-dark);
 
     font-size: 15px;
 
@@ -522,7 +515,7 @@ nav a:hover {
     background:
         linear-gradient(
             to top,
-            rgba(0,0,0,.45),
+            rgba(0,0,0,.5),
             transparent 55%
         );
 }
@@ -560,10 +553,10 @@ nav a:hover {
 
     text-align: center;
 
-    background: var(--off-white);
+    background: var(--cream-2);
 
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
 }
 
 .cta h2 {
@@ -604,7 +597,7 @@ nav a:hover {
 .contact-details {
     padding-top: 20px;
 
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--gray-light);
 }
 
 .contact-details p {
@@ -626,7 +619,7 @@ nav a:hover {
 }
 
 .contact-details a {
-    color: #444;
+    color: var(--gray-dark);
 }
 
 
@@ -643,9 +636,9 @@ footer {
 
     justify-content: space-between;
 
-    background: var(--off-white);
+    background: var(--cream);
 
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--gray-light);
 
     color: var(--gray);
 
@@ -660,7 +653,7 @@ footer strong {
 
 
 /* =====================================================
-   RESPONSIVO
+   CELULAR
 ===================================================== */
 
 @media (max-width: 800px) {
@@ -724,7 +717,7 @@ footer strong {
 
         border-right: 0;
 
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid var(--gray-light);
     }
 
     .service:last-child {
@@ -756,6 +749,7 @@ footer strong {
 
         gap: 12px;
     }
+
 }
 
 </style>
@@ -858,7 +852,7 @@ footer strong {
      SERVIÇOS
 ===================================================== -->
 
-<section id="servicos" class="section">
+<section id="servicos" class="section services-section">
 
     <div class="section-top">
 
@@ -1029,27 +1023,21 @@ footer strong {
     <div class="gallery">
 
         <div class="gallery-item gallery-1">
-
             <span>
                 CORTES
             </span>
-
         </div>
 
         <div class="gallery-item gallery-2">
-
             <span>
                 TRANSFORMAÇÃO
             </span>
-
         </div>
 
         <div class="gallery-item gallery-3">
-
             <span>
                 BELEZA
             </span>
-
         </div>
 
     </div>
