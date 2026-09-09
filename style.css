@@ -443,3 +443,99 @@ footer strong {
     gap: 12px;
   }
 }
+/* ================================
+   CORREÇÃO FINAL - FUNDO BRANCO
+   ================================ */
+
+html,
+body {
+    background: #ffffff !important;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(255, 255, 255, 0.96) !important;
+    color: #191612 !important;
+}
+
+/* Menu */
+header nav a,
+header .brand {
+    color: #191612 !important;
+}
+
+/* Todas as seções claras */
+.section {
+    background: #ffffff !important;
+    color: #191612 !important;
+}
+
+/* Seção de serviços */
+#servicos {
+    background: #ffffff !important;
+}
+
+/* Seção Sobre */
+.about {
+    background: #ffffff !important;
+}
+
+.about-copy {
+    background: #ffffff !important;
+    color: #191612 !important;
+}
+
+/* Galeria */
+#galeria {
+    background: #ffffff !important;
+    color: #191612 !important;
+}
+
+/* Contato */
+.contact {
+    background: #ffffff !important;
+    color: #191612 !important;
+}
+
+/* Rodapé */
+footer {
+    background: #ffffff !important;
+    color: #756e66 !important;
+}
+
+/* Textos */
+.section h2,
+.about h2,
+.contact h2,
+.intro-text,
+.service-grid h3,
+.service-grid p {
+    color: #191612;
+}
+
+/* Cards dos serviços */
+.service-grid {
+    background: #ffffff !important;
+}
+
+.service-grid article {
+    background: #ffffff !important;
+}
+
+/* Mantém somente a CTA escura */
+.cta {
+    background: #211d19 !important;
+    color: #ffffff !important;
+}
+
+/* Botões continuam escuros */
+.btn {
+    background: #211d19 !important;
+    color: #ffffff !important;
+}
+
+/* Botão claro da CTA */
+.cta .btn.light {
+    background: #ffffff !important;
+    color: #211d19 !important;
+}
