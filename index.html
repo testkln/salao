@@ -16,18 +16,20 @@
 
 :root {
     --off-white: #FAF7F2;
-    --cream: #F3EDE4;
+    --cream: #F2ECE3;
+
     --beige: #E8DDD0;
     --beige-strong: #C9B6A0;
 
-    --warm-gray: #8F8172;
+    --warm-gray: #8F877D;
     --warm-gray-light: #C9C0B6;
 
-    --graphite: #4E4842;
+    --graphite: #5A554F;
     --dark: #514B45;
     --black: #45403B;
 
     --white: #FFFFFF;
+
     --border: #DCD2C7;
 }
 
@@ -73,6 +75,7 @@ header {
 
     position: sticky;
     top: 0;
+
     z-index: 1000;
 
     background: rgba(250, 247, 242, 0.96);
@@ -84,22 +87,28 @@ header {
 
 .brand {
     color: var(--black);
+
     font-size: 26px;
     font-weight: 600;
+
     letter-spacing: 6px;
 }
 
 nav {
     display: flex;
+
     gap: 32px;
 
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.5px;
 }
 
 nav a {
     color: var(--graphite);
+
     transition: .25s;
 }
 
@@ -112,28 +121,34 @@ nav a:hover {
 
 .btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
     padding: 14px 24px;
 
     background: var(--graphite);
+
     color: var(--white);
 
     border: 1px solid var(--graphite);
 
     font-size: 11px;
+
     font-weight: 500;
 
     text-transform: uppercase;
+
     letter-spacing: 1.3px;
 
     transition: .25s;
 }
 
 .btn:hover {
-    background: #665D54;
-    border-color: #665D54;
+    background: var(--dark);
+
+    border-color: var(--dark);
+
     transform: translateY(-2px);
 }
 
@@ -150,6 +165,7 @@ nav a:hover {
     position: relative;
 
     display: flex;
+
     align-items: center;
 
     background:
@@ -157,15 +173,13 @@ nav a:hover {
         center / cover no-repeat;
 
     color: var(--white);
-
-    /* Saturação restaurada */
-    filter: saturate(1.18);
 }
 
 .hero::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -179,15 +193,14 @@ nav a:hover {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
+
     max-width: 900px;
 
     padding: 8%;
-
-    /* Remove filtro herdado */
-    filter: none;
 }
 
 .hero-label {
@@ -196,7 +209,9 @@ nav a:hover {
     color: #F4EFE8;
 
     font-size: 10px;
+
     font-weight: 600;
+
     letter-spacing: 3px;
 }
 
@@ -208,6 +223,7 @@ nav a:hover {
     font-size: clamp(56px, 8vw, 108px);
 
     font-weight: 500;
+
     line-height: .96;
 
     color: #FFFFFF;
@@ -225,23 +241,29 @@ nav a:hover {
     color: #F4F0EA;
 
     font-size: 18px;
+
     line-height: 1.65;
 }
 
 .hero-actions {
     display: flex;
+
     align-items: center;
+
     gap: 28px;
 }
 
 .hero .btn {
     background: var(--off-white);
+
     color: var(--dark);
+
     border-color: var(--off-white);
 }
 
 .hero .btn:hover {
     background: var(--beige);
+
     border-color: var(--beige);
 }
 
@@ -249,7 +271,9 @@ nav a:hover {
     color: #FFFFFF;
 
     font-size: 11px;
+
     text-transform: uppercase;
+
     letter-spacing: 1.3px;
 
     padding-bottom: 5px;
@@ -270,7 +294,9 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 10px;
+
     font-weight: 600;
+
     letter-spacing: 3px;
 
     text-transform: uppercase;
@@ -295,6 +321,7 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-weight: 500;
+
     line-height: .98;
 
     color: var(--graphite);
@@ -317,6 +344,7 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 16px;
+
     line-height: 1.85;
 }
 
@@ -361,6 +389,7 @@ nav a:hover {
     color: var(--beige-strong);
 
     font-size: 11px;
+
     letter-spacing: 1px;
 }
 
@@ -370,6 +399,7 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: 31px;
+
     font-weight: 500;
 
     color: var(--graphite);
@@ -379,6 +409,7 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 14px;
+
     line-height: 1.7;
 }
 
@@ -399,23 +430,23 @@ nav a:hover {
     background:
         url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1300&q=85")
         center / cover no-repeat;
-
-    /* Saturação restaurada */
-    filter: saturate(1.18);
 }
 
 .about-content {
     padding: 11%;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 
-    background: var(--cream);
+    background: var(--beige);
 }
 
 .about h2 {
     font-size: clamp(48px, 5.5vw, 75px);
+
     margin-bottom: 30px;
 }
 
@@ -427,11 +458,13 @@ nav a:hover {
     color: var(--graphite);
 
     font-size: 15px;
+
     line-height: 1.85;
 }
 
 .about-content .btn {
     align-self: flex-start;
+
     margin-top: 12px;
 }
 
@@ -444,11 +477,13 @@ nav a:hover {
 
 .gallery-header {
     text-align: center;
+
     margin-bottom: 65px;
 }
 
 .gallery-header h2 {
     color: var(--graphite);
+
     font-size: clamp(48px, 6vw, 76px);
 }
 
@@ -466,6 +501,7 @@ nav a:hover {
     position: relative;
 
     display: flex;
+
     align-items: flex-end;
 
     padding: 25px;
@@ -475,19 +511,19 @@ nav a:hover {
     color: #FFFFFF;
 
     font-family: "Playfair Display", Georgia, serif;
+
     font-size: 27px;
 
     background-size: cover;
-    background-position: center;
 
-    /* Saturação restaurada */
-    filter: saturate(1.22);
+    background-position: center;
 }
 
 .gallery-item::after {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -500,15 +536,11 @@ nav a:hover {
 
 .gallery-item span {
     position: relative;
+
     z-index: 2;
 
     color: #FFFFFF;
-
-    filter: none;
 }
-
-
-/* FOTOS */
 
 .gallery-1 {
     background-image:
@@ -526,14 +558,14 @@ nav a:hover {
 }
 
 
-/* CTA — CREME */
+/* CTA */
 
 .cta {
     padding: 125px 8%;
 
     text-align: center;
 
-    background: var(--cream);
+    background: var(--beige);
 
     color: var(--graphite);
 
@@ -553,7 +585,7 @@ nav a:hover {
 }
 
 .cta h2 em {
-    color: #A9957F;
+    color: var(--beige-strong);
 }
 
 .cta .btn {
@@ -566,6 +598,7 @@ nav a:hover {
 
 .cta .btn:hover {
     background: var(--dark);
+
     border-color: var(--dark);
 }
 
@@ -621,7 +654,7 @@ nav a:hover {
 }
 
 
-/* FOOTER — CREME/BEGE */
+/* FOOTER */
 
 footer {
     padding: 30px 8%;
@@ -629,17 +662,19 @@ footer {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
-    background: var(--beige);
+    background: #D8CABC;
 
-    color: #756A5E;
+    color: #746B62;
 
     font-size: 12px;
 }
 
 footer strong {
     color: var(--graphite);
+
     letter-spacing: 4px;
 }
 
@@ -650,6 +685,7 @@ footer strong {
 
     header {
         height: 70px;
+
         padding: 0 5%;
     }
 
@@ -679,7 +715,9 @@ footer strong {
 
     .hero-actions {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 20px;
     }
 
@@ -703,6 +741,7 @@ footer strong {
         min-height: auto;
 
         border-right: 0;
+
         border-bottom: 1px solid var(--border);
     }
 
@@ -730,11 +769,11 @@ footer strong {
         padding: 25px 7%;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         gap: 12px;
     }
-
 }
 
 </style>
@@ -998,15 +1037,29 @@ footer strong {
     <div class="gallery">
 
         <div class="gallery-item gallery-1">
-            <span>CORTES</span>
+
+            <span>
+                CORTES
+            </span>
+
         </div>
+
 
         <div class="gallery-item gallery-2">
-            <span>TRANSFORMAÇÃO</span>
+
+            <span>
+                TRANSFORMAÇÃO
+            </span>
+
         </div>
 
+
         <div class="gallery-item gallery-3">
-            <span>BELEZA</span>
+
+            <span>
+                BELEZA
+            </span>
+
         </div>
 
     </div>
@@ -1060,7 +1113,11 @@ footer strong {
     <div class="contact-details">
 
         <p>
-            <strong>WhatsApp</strong>
+
+            <strong>
+                WhatsApp
+            </strong>
+
             <br>
 
             <a
@@ -1070,22 +1127,33 @@ footer strong {
             >
                 (85) 98735-5060
             </a>
+
         </p>
 
 
         <p>
-            <strong>Localização</strong>
+
+            <strong>
+                Localização
+            </strong>
+
             <br>
 
             Fortaleza — Ceará
+
         </p>
 
 
         <p>
-            <strong>Atendimento</strong>
+
+            <strong>
+                Atendimento
+            </strong>
+
             <br>
 
             Consulte horários e disponibilidade pelo WhatsApp.
+
         </p>
 
     </div>
