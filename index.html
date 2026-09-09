@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,6 +40,7 @@ html {
 }
 
 body {
+    margin: 0;
     background: var(--off-white);
     color: var(--graphite);
     font-family: "DM Sans", Arial, sans-serif;
@@ -66,7 +68,7 @@ header {
     top: 0;
     z-index: 1000;
 
-    background: rgba(244, 241, 236, .96);
+    background: rgba(244, 241, 236, 0.96);
     backdrop-filter: blur(14px);
 
     border-bottom: 1px solid var(--border);
@@ -189,10 +191,9 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: clamp(56px, 8vw, 108px);
-
     font-weight: 500;
-    line-height: .96;
 
+    line-height: .96;
     color: #fff;
 }
 
@@ -261,7 +262,6 @@ nav a:hover {
 
 .section-top {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
@@ -312,7 +312,6 @@ nav a:hover {
 
 .services {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     border: 1px solid var(--border);
@@ -370,7 +369,6 @@ nav a:hover {
 
 .about {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     background: var(--off-white);
@@ -396,7 +394,6 @@ nav a:hover {
 
 .about h2 {
     font-size: clamp(48px, 5.5vw, 75px);
-
     margin-bottom: 30px;
 }
 
@@ -492,11 +489,12 @@ nav a:hover {
 }
 
 
-/* TRANSFORMAÇÃO — NOVA FOTO */
+/* TRANSFORMAÇÃO
+   Foto específica de cabelo/salão */
 
 .gallery-2 {
     background-image:
-        url("https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=85");
+        url("https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1000&q=85");
 }
 
 
@@ -548,6 +546,7 @@ nav a:hover {
 
 .cta .btn:hover {
     background: var(--beige);
+
     border-color: var(--beige);
 }
 
@@ -651,4 +650,475 @@ footer strong {
         padding: 13% 7%;
     }
 
-    .
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+
+    .section-top,
+    .services,
+    .about,
+    .gallery,
+    .contact {
+        grid-template-columns: 1fr;
+    }
+
+    .section-top {
+        gap: 35px;
+    }
+
+    .service {
+        min-height: auto;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .service:last-child {
+        border-bottom: 0;
+    }
+
+    .about-image {
+        min-height: 430px;
+    }
+
+    .about-content {
+        padding: 80px 7%;
+    }
+
+    .gallery-item {
+        height: 330px;
+    }
+
+    .contact {
+        gap: 45px;
+    }
+
+    footer {
+        padding: 25px 7%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="#inicio" class="brand">
+        KBLOS
+    </a>
+
+    <nav>
+
+        <a href="#servicos">
+            Serviços
+        </a>
+
+        <a href="#sobre">
+            Sobre
+        </a>
+
+        <a href="#galeria">
+            Galeria
+        </a>
+
+        <a href="#contato">
+            Contato
+        </a>
+
+    </nav>
+
+    <a
+        href="https://wa.me/5585987355060"
+        target="_blank"
+        rel="noopener"
+        class="btn mini"
+    >
+        Agendar
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section id="inicio" class="hero">
+
+    <div class="hero-content">
+
+        <p class="hero-label">
+            SALÃO DE BELEZA · FORTALEZA
+        </p>
+
+        <h1>
+            Beleza que<br>
+            <em>marca presença.</em>
+        </h1>
+
+        <p class="hero-description">
+            Um espaço para cuidar do seu visual, descobrir seu estilo
+            e viver uma experiência especial.
+        </p>
+
+        <div class="hero-actions">
+
+            <a
+                href="https://wa.me/5585987355060"
+                target="_blank"
+                rel="noopener"
+                class="btn"
+            >
+                Agendar pelo WhatsApp
+            </a>
+
+            <a
+                href="#servicos"
+                class="hero-link"
+            >
+                Conheça o Kblos ↓
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVIÇOS ================= -->
+
+<section id="servicos" class="section services-section">
+
+    <div class="section-top">
+
+        <div>
+
+            <p class="kicker">
+                Nosso trabalho
+            </p>
+
+            <h2>
+                Seu cuidado.<br>
+                <em>Seu estilo.</em>
+            </h2>
+
+        </div>
+
+        <p class="description">
+            Mais do que cuidar da sua beleza, queremos que você se sinta
+            bem consigo mesma. Cada detalhe é pensado para valorizar
+            o que há de melhor em você e transformar cada momento
+            de cuidado em uma experiência especial.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+        <article class="service">
+
+            <span class="service-number">
+                01
+            </span>
+
+            <h3>
+                Manicure
+            </h3>
+
+            <p>
+                Cuidados para mãos e unhas com acabamento impecável.
+            </p>
+
+        </article>
+
+
+        <article class="service">
+
+            <span class="service-number">
+                02
+            </span>
+
+            <h3>
+                Estética facial
+            </h3>
+
+            <p>
+                Cuidados faciais para renovar e valorizar sua pele.
+            </p>
+
+        </article>
+
+
+        <article class="service">
+
+            <span class="service-number">
+                03
+            </span>
+
+            <h3>
+                Depilação
+            </h3>
+
+            <p>
+                Praticidade e cuidado para uma pele bem cuidada.
+            </p>
+
+        </article>
+
+
+        <article class="service">
+
+            <span class="service-number">
+                04
+            </span>
+
+            <h3>
+                Cabelos
+            </h3>
+
+            <p>
+                Cortes, escovas, coloração e finalizações para o seu estilo.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOBRE ================= -->
+
+<section id="sobre" class="about">
+
+    <div class="about-image"></div>
+
+    <div class="about-content">
+
+        <p class="kicker">
+            Sobre o Kblos
+        </p>
+
+        <h2>
+            Um momento<br>
+            <em>só seu.</em>
+        </h2>
+
+        <p>
+            O Kblos foi pensado para unir beleza, conforto e atendimento
+            próximo.
+        </p>
+
+        <p>
+            Aqui, cada visita é uma oportunidade de cuidar de você
+            e sair se sentindo ainda melhor.
+        </p>
+
+        <p>
+            Venha conhecer nosso espaço em Fortaleza.
+        </p>
+
+        <a
+            href="https://wa.me/5585987355060"
+            target="_blank"
+            rel="noopener"
+            class="btn"
+        >
+            Falar com o Kblos
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALERIA ================= -->
+
+<section id="galeria" class="section gallery-section">
+
+    <div class="gallery-header">
+
+        <p class="kicker">
+            Inspiração
+        </p>
+
+        <h2>
+            Encontre seu<br>
+            <em>próximo visual.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item gallery-1">
+
+            <span>
+                CORTES
+            </span>
+
+        </div>
+
+
+        <!-- FOTO DE TRANSFORMAÇÃO CORRIGIDA -->
+
+        <div class="gallery-item gallery-2">
+
+            <span>
+                TRANSFORMAÇÃO
+            </span>
+
+        </div>
+
+
+        <div class="gallery-item gallery-3">
+
+            <span>
+                BELEZA
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <p class="kicker">
+        Seu próximo momento
+    </p>
+
+    <h2>
+        Vamos cuidar<br>
+        <em>de você?</em>
+    </h2>
+
+    <a
+        href="https://wa.me/5585987355060"
+        target="_blank"
+        rel="noopener"
+        class="btn"
+    >
+        Agendar horário
+    </a>
+
+</section>
+
+
+<!-- ================= CONTATO ================= -->
+
+<section id="contato" class="contact">
+
+    <div>
+
+        <p class="kicker">
+            Contato
+        </p>
+
+        <h2>
+            Fale com<br>
+            <em>a gente.</em>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-details">
+
+        <p>
+
+            <strong>
+                WhatsApp
+            </strong>
+
+            <br>
+
+            <a
+                href="https://wa.me/5585987355060"
+                target="_blank"
+                rel="noopener"
+            >
+                (85) 98735-5060
+            </a>
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Localização
+            </strong>
+
+            <br>
+
+            Fortaleza — Ceará
+
+        </p>
+
+
+        <p>
+
+            <strong>
+                Atendimento
+            </strong>
+
+            <br>
+
+            Consulte horários e disponibilidade pelo WhatsApp.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <strong>
+        KBLOS
+    </strong>
+
+    <span>
+        Salão de Beleza · Fortaleza/CE
+    </span>
+
+</footer>
+
+
+</body>
+</html>
