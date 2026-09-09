@@ -14,32 +14,19 @@
 
 <style>
 
-/* =====================================================
-   PALETA KBLOS
-===================================================== */
-
 :root {
     --off-white: #F4F1EC;
     --cream: #E9E3DA;
     --beige: #D6C8B8;
     --beige-strong: #BDA991;
-
     --warm-gray: #8A837A;
     --warm-gray-light: #C8C1B8;
-
     --graphite: #353330;
     --dark: #292825;
     --black: #1D1C1A;
-
     --white: #FFFFFF;
-
     --border: #CEC7BE;
 }
-
-
-/* =====================================================
-   RESET
-===================================================== */
 
 * {
     margin: 0;
@@ -53,7 +40,6 @@ html {
 }
 
 body {
-    margin: 0;
     background: var(--off-white);
     color: var(--graphite);
     font-family: "DM Sans", Arial, sans-serif;
@@ -66,14 +52,11 @@ a {
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 header {
     width: 100%;
     height: 78px;
-
     padding: 0 6%;
 
     display: flex;
@@ -85,7 +68,6 @@ header {
     z-index: 1000;
 
     background: rgba(244, 241, 236, 0.96);
-
     backdrop-filter: blur(14px);
 
     border-bottom: 1px solid var(--border);
@@ -93,26 +75,21 @@ header {
 
 .brand {
     color: var(--black);
-
     font-size: 26px;
     font-weight: 600;
-
     letter-spacing: 6px;
 }
 
 nav {
     display: flex;
     gap: 32px;
-
     font-size: 11px;
-
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 nav a {
     color: var(--graphite);
-
     transition: 0.25s;
 }
 
@@ -121,13 +98,10 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   BOTÕES
-===================================================== */
+/* BOTÕES */
 
 .btn {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
 
@@ -150,7 +124,6 @@ nav a:hover {
 .btn:hover {
     background: var(--black);
     border-color: var(--black);
-
     transform: translateY(-2px);
 }
 
@@ -159,9 +132,7 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero {
     min-height: calc(100vh - 78px);
@@ -180,7 +151,6 @@ nav a:hover {
 
 .hero::after {
     content: "";
-
     position: absolute;
     inset: 0;
 
@@ -195,7 +165,6 @@ nav a:hover {
 
 .hero-content {
     position: relative;
-
     z-index: 2;
 
     width: 100%;
@@ -211,7 +180,6 @@ nav a:hover {
 
     font-size: 10px;
     font-weight: 600;
-
     letter-spacing: 3px;
 }
 
@@ -221,11 +189,9 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: clamp(56px, 8vw, 108px);
-
     font-weight: 500;
 
     line-height: .96;
-
     color: #fff;
 }
 
@@ -241,29 +207,23 @@ nav a:hover {
     color: #F1ECE5;
 
     font-size: 18px;
-
     line-height: 1.65;
 }
 
 .hero-actions {
     display: flex;
-
     align-items: center;
-
     gap: 28px;
 }
 
 .hero .btn {
     background: var(--off-white);
-
     color: var(--graphite);
-
     border-color: var(--off-white);
 }
 
 .hero .btn:hover {
     background: var(--beige);
-
     border-color: var(--beige);
 }
 
@@ -271,9 +231,7 @@ nav a:hover {
     color: #fff;
 
     font-size: 11px;
-
     text-transform: uppercase;
-
     letter-spacing: 1.3px;
 
     padding-bottom: 5px;
@@ -282,9 +240,7 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   SEÇÕES
-===================================================== */
+/* SEÇÕES */
 
 .section {
     padding: 115px 8%;
@@ -299,13 +255,11 @@ nav a:hover {
     font-weight: 600;
 
     letter-spacing: 3px;
-
     text-transform: uppercase;
 }
 
 .section-top {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
@@ -323,7 +277,6 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-weight: 500;
-
     line-height: .98;
 
     color: var(--graphite);
@@ -346,14 +299,11 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 16px;
-
     line-height: 1.85;
 }
 
 
-/* =====================================================
-   SERVIÇOS
-===================================================== */
+/* SERVIÇOS */
 
 .services-section {
     background: var(--cream);
@@ -361,7 +311,6 @@ nav a:hover {
 
 .services {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     border: 1px solid var(--border);
@@ -393,7 +342,6 @@ nav a:hover {
     color: var(--beige-strong);
 
     font-size: 11px;
-
     letter-spacing: 1px;
 }
 
@@ -403,7 +351,6 @@ nav a:hover {
     font-family: "Playfair Display", Georgia, serif;
 
     font-size: 31px;
-
     font-weight: 500;
 
     color: var(--graphite);
@@ -413,18 +360,14 @@ nav a:hover {
     color: var(--warm-gray);
 
     font-size: 14px;
-
     line-height: 1.7;
 }
 
 
-/* =====================================================
-   SOBRE
-===================================================== */
+/* SOBRE */
 
 .about {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     background: var(--off-white);
@@ -442,9 +385,7 @@ nav a:hover {
     padding: 11%;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
 
     background: var(--beige);
@@ -452,7 +393,6 @@ nav a:hover {
 
 .about h2 {
     font-size: clamp(48px, 5.5vw, 75px);
-
     margin-bottom: 30px;
 }
 
@@ -464,24 +404,16 @@ nav a:hover {
     color: var(--graphite);
 
     font-size: 15px;
-
     line-height: 1.85;
 }
 
 .about-content .btn {
     align-self: flex-start;
-
     margin-top: 12px;
-
-    background: var(--graphite);
-
-    color: #fff;
 }
 
 
-/* =====================================================
-   GALERIA
-===================================================== */
+/* GALERIA */
 
 .gallery-section {
     background: var(--off-white);
@@ -489,7 +421,6 @@ nav a:hover {
 
 .gallery-header {
     text-align: center;
-
     margin-bottom: 65px;
 }
 
@@ -511,7 +442,6 @@ nav a:hover {
     position: relative;
 
     display: flex;
-
     align-items: flex-end;
 
     padding: 25px;
@@ -525,7 +455,6 @@ nav a:hover {
     font-size: 27px;
 
     background-size: cover;
-
     background-position: center;
 }
 
@@ -533,7 +462,6 @@ nav a:hover {
     content: "";
 
     position: absolute;
-
     inset: 0;
 
     background:
@@ -546,7 +474,6 @@ nav a:hover {
 
 .gallery-item span {
     position: relative;
-
     z-index: 2;
 
     color: #fff;
@@ -557,20 +484,22 @@ nav a:hover {
         url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85");
 }
 
+/*
+   NOVA FOTO DE TRANSFORMAÇÃO
+   Imagem focada em cabelo / salão
+*/
 .gallery-2 {
     background-image:
-        url("https://images.unsplash.com/photo-1527799820374-dcf8f7e1e9f1?auto=format&fit=crop&w=900&q=85");
+        url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85");
 }
 
 .gallery-3 {
     background-image:
-        url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85");
+        url("https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=85");
 }
 
 
-/* =====================================================
-   CTA
-===================================================== */
+/* CTA */
 
 .cta {
     padding: 125px 8%;
@@ -615,9 +544,7 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   CONTATO
-===================================================== */
+/* CONTATO */
 
 .contact {
     padding: 115px 8%;
@@ -661,8 +588,6 @@ nav a:hover {
 
 .contact-details a {
     color: var(--graphite);
-
-    transition: .2s;
 }
 
 .contact-details a:hover {
@@ -670,9 +595,7 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 footer {
     padding: 30px 8%;
@@ -680,7 +603,6 @@ footer {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     background: var(--dark);
@@ -692,20 +614,16 @@ footer {
 
 footer strong {
     color: var(--off-white);
-
     letter-spacing: 4px;
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media (max-width: 800px) {
 
     header {
         height: 70px;
-
         padding: 0 5%;
     }
 
@@ -735,9 +653,7 @@ footer strong {
 
     .hero-actions {
         flex-direction: column;
-
         align-items: flex-start;
-
         gap: 20px;
     }
 
@@ -761,7 +677,6 @@ footer strong {
         min-height: auto;
 
         border-right: 0;
-
         border-bottom: 1px solid var(--border);
     }
 
@@ -789,7 +704,6 @@ footer strong {
         padding: 25px 7%;
 
         flex-direction: column;
-
         align-items: flex-start;
 
         gap: 12px;
@@ -804,10 +718,6 @@ footer strong {
 <body>
 
 
-<!-- =====================================================
-     CABEÇALHO
-===================================================== -->
-
 <header>
 
     <a href="#inicio" class="brand">
@@ -816,21 +726,10 @@ footer strong {
 
     <nav>
 
-        <a href="#servicos">
-            Serviços
-        </a>
-
-        <a href="#sobre">
-            Sobre
-        </a>
-
-        <a href="#galeria">
-            Galeria
-        </a>
-
-        <a href="#contato">
-            Contato
-        </a>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
 
     </nav>
 
@@ -845,10 +744,6 @@ footer strong {
 
 </header>
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section id="inicio" class="hero">
 
@@ -879,10 +774,7 @@ footer strong {
                 Agendar pelo WhatsApp
             </a>
 
-            <a
-                href="#servicos"
-                class="hero-link"
-            >
+            <a href="#servicos" class="hero-link">
                 Conheça o Kblos ↓
             </a>
 
@@ -892,10 +784,6 @@ footer strong {
 
 </section>
 
-
-<!-- =====================================================
-     SERVIÇOS
-===================================================== -->
 
 <section id="servicos" class="section services-section">
 
@@ -928,13 +816,9 @@ footer strong {
 
         <article class="service">
 
-            <span class="service-number">
-                01
-            </span>
+            <span class="service-number">01</span>
 
-            <h3>
-                Manicure
-            </h3>
+            <h3>Manicure</h3>
 
             <p>
                 Cuidados para mãos e unhas com acabamento impecável.
@@ -945,13 +829,9 @@ footer strong {
 
         <article class="service">
 
-            <span class="service-number">
-                02
-            </span>
+            <span class="service-number">02</span>
 
-            <h3>
-                Estética facial
-            </h3>
+            <h3>Estética facial</h3>
 
             <p>
                 Cuidados faciais para renovar e valorizar sua pele.
@@ -962,13 +842,9 @@ footer strong {
 
         <article class="service">
 
-            <span class="service-number">
-                03
-            </span>
+            <span class="service-number">03</span>
 
-            <h3>
-                Depilação
-            </h3>
+            <h3>Depilação</h3>
 
             <p>
                 Praticidade e cuidado para uma pele bem cuidada.
@@ -979,13 +855,9 @@ footer strong {
 
         <article class="service">
 
-            <span class="service-number">
-                04
-            </span>
+            <span class="service-number">04</span>
 
-            <h3>
-                Cabelos
-            </h3>
+            <h3>Cabelos</h3>
 
             <p>
                 Cortes, escovas, coloração e finalizações para o seu estilo.
@@ -997,10 +869,6 @@ footer strong {
 
 </section>
 
-
-<!-- =====================================================
-     SOBRE
-===================================================== -->
 
 <section id="sobre" class="about">
 
@@ -1032,184 +900,3 @@ footer strong {
         </p>
 
         <a
-            href="https://wa.me/5585987355060"
-            target="_blank"
-            rel="noopener"
-            class="btn"
-        >
-            Falar com o Kblos
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     GALERIA
-===================================================== -->
-
-<section id="galeria" class="section gallery-section">
-
-    <div class="gallery-header">
-
-        <p class="kicker">
-            Inspiração
-        </p>
-
-        <h2>
-            Encontre seu<br>
-            <em>próximo visual.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <div class="gallery-item gallery-1">
-
-            <span>
-                CORTES
-            </span>
-
-        </div>
-
-        <div class="gallery-item gallery-2">
-
-            <span>
-                TRANSFORMAÇÃO
-            </span>
-
-        </div>
-
-        <div class="gallery-item gallery-3">
-
-            <span>
-                BELEZA
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="cta">
-
-    <p class="kicker">
-        Seu próximo momento
-    </p>
-
-    <h2>
-        Vamos cuidar<br>
-        <em>de você?</em>
-    </h2>
-
-    <a
-        href="https://wa.me/5585987355060"
-        target="_blank"
-        rel="noopener"
-        class="btn"
-    >
-        Agendar horário
-    </a>
-
-</section>
-
-
-<!-- =====================================================
-     CONTATO
-===================================================== -->
-
-<section id="contato" class="contact">
-
-    <div>
-
-        <p class="kicker">
-            Contato
-        </p>
-
-        <h2>
-            Fale com<br>
-            <em>a gente.</em>
-        </h2>
-
-    </div>
-
-
-    <div class="contact-details">
-
-        <p>
-
-            <strong>
-                WhatsApp
-            </strong>
-
-            <br>
-
-            <a
-                href="https://wa.me/5585987355060"
-                target="_blank"
-                rel="noopener"
-            >
-                (85) 98735-5060
-            </a>
-
-        </p>
-
-
-        <p>
-
-            <strong>
-                Localização
-            </strong>
-
-            <br>
-
-            Fortaleza — Ceará
-
-        </p>
-
-
-        <p>
-
-            <strong>
-                Atendimento
-            </strong>
-
-            <br>
-
-            Consulte horários e disponibilidade pelo WhatsApp.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     RODAPÉ
-===================================================== -->
-
-<footer>
-
-    <strong>
-        KBLOS
-    </strong>
-
-    <span>
-        Salão de Beleza · Fortaleza/CE
-    </span>
-
-</footer>
-
-
-</body>
-</html>
