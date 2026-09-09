@@ -1,636 +1,268 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+<!doctype html> <html lang="pt-BR"> <head> <meta charset="utf-8">
 
-:root {
---bg: #ffffff;
---ink: #191612;
---muted: #756e66;
---line: #ddd5cc;
---brown: #9b7554;
---dark: #ffffff;
-}
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1"
 
-{
-box-sizing: border-box;
-}
+<meta
+name="description"
+content="KBLOS — salão de beleza em Fortaleza"
 
-html {
-scroll-behavior: smooth;
-background: #ffffff;
-}
+<title>KBLOS — Salão de Beleza</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin > <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" > <style> :root { --white: #ffffff; --text: #191612; --muted: #756e66; --line: #ddd5cc; --brown: #9b7554; } * { box-sizing: border-box; } html { scroll-behavior: smooth; background: #ffffff; } body { margin: 0; background: #ffffff; color: var(--text); font-family: "DM Sans", sans-serif; } a { text-decoration: none; color: inherit; } /* ========================== HERO ========================== */ .hero { min-height: 100vh; position: relative; display: flex; align-items: center; background: url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2000&q=85") center / cover; color: #ffffff; } .hero-overlay { position: absolute; inset: 0; background: linear-gradient( 90deg, rgba(17, 14, 12, 0.55), rgba(17, 14, 12, 0.08) ); } .hero-content { position: relative; z-index: 1; padding: 8%; max-width: 800px; } .label { font-size: 10px; letter-spacing: 3px; font-weight: 600; margin: 0 0 20px; } .hero h1 { font-family: "Playfair Display", serif; font-weight: 500; line-height: 0.98; font-size: clamp(58px, 8vw, 108px); margin: 0 0 28px; } .hero h1 em { font-style: italic; } .hero-description { font-size: 18px; line-height: 1.6; max-width: 530px; color: #eeeeee; } .actions { display: flex; gap: 28px; align-items: center; margin-top: 32px; } .under { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; border-bottom: 1px solid #ffffff; padding-bottom: 4px; color: #ffffff; } /* ========================== BOTÕES BRANCOS ========================== */ .btn { display: inline-block; background: #ffffff; color: #191612; border: 1px solid #ffffff; padding: 14px 24px; text-transform: uppercase; letter-spacing: 1.2px; font-size: 12px; transition: 0.2s; } .btn:hover { background: #f3f3f3; color: #191612; transform: translateY(-2px); } /* ========================== SEÇÕES ========================== */ .section { padding: 110px 8%; background: #ffffff; color: #191612; } .intro { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 70px; } .section h2, .about h2, .cta h2, .contact h2 { font-family: "Playfair Display", serif; font-weight: 500; line-height: 0.98; margin: 0; color: #191612; } .intro h2 { font-size: clamp(48px, 6vw, 76px); } .intro h2 em, .about h2 em, .cta h2 em, .contact h2 em { font-style: italic; } .intro-text { font-size: 16px; line-height: 1.85; color: var(--muted); max-width: 560px; } /* ========================== SERVIÇOS ========================== */ .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); background: #ffffff; } .service-grid article { padding: 42px 30px; min-height: 250px; border-right: 1px solid var(--line); background: #ffffff; color: #191612; } .service-grid article:last-child { border-right: 0; } .service-grid span { color: var(--brown); font-size: 11px; } .service-grid h3 { font-family: "Playfair Display", serif; font-size: 31px; font-weight: 500; margin: 45px 0 8px; color: #191612; } .service-grid p { color: var(--muted); margin: 0; line-height: 1.6; } /* ========================== SOBRE ========================== */ .about { display: grid; grid-template-columns: 1fr 1fr; background: #ffffff; } .about-photo { min-height: 650px; background: url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1300&q=85") center / cover; } .about-copy { padding: 11%; display: flex; justify-content: center; flex-direction: column; background: #ffffff; color: #191612; } .about h2, .contact h2 { font-size: clamp(48px, 5.5vw, 75px); margin-bottom: 30px; } .about-copy > p:not(.label) { max-width: 520px; color: #665f57; line-height: 1.8; } .about-copy .btn { align-self: flex-start; margin-top: 12px; color: #191612; } /* ========================== GALERIA ========================== */ .center { text-align: center; margin-bottom: 65px; } .center h2 { font-size: clamp(48px, 6vw, 76px); } .gallery { display: grid; grid-template-columns: 1.15fr 0.9fr 0.9fr; gap: 14px; } .pic { height: 430px; background-size: cover; background-position: center; display: flex; align-items: flex-end; padding: 25px; color: #ffffff; font-family: "Playfair Display", serif; font-size: 27px; } .p1 { background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.45), transparent ), url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85"); } .p2 { background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.45), transparent ), url("https://images.unsplash.com/photo-1527799820374-dcf8f7e1e9f1?auto=format&fit=crop&w=900&q=85"); } .p3 { background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.45), transparent ), url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85"); } /* ========================== CTA — BRANCA ========================== */ .cta { background: #ffffff; color: #191612; text-align: center; padding: 120px 8%; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); } .cta h2 { font-size: clamp(55px, 7vw, 90px); margin-bottom: 35px; } .cta .label { color: var(--muted); } .cta .btn { background: #ffffff; color: #191612; border: 1px solid #191612; } /* ========================== CONTATO ========================== */ .contact { padding: 110px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; background: #ffffff; color: #191612; } .details { border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); line-height: 1.7; } .details b { color: #191612; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; } .details a { color: var(--brown); } /* ========================== FOOTER ========================== */ footer { border-top: 1px solid var(--line); padding: 28px 8%; display: flex; justify-content: space-between; color: var(--muted); font-size: 12px; background: #ffffff; } footer strong { color: #191612; letter-spacing: 4px; } /* ========================== CELULAR ========================== */ @media (max-width: 800px) { .hero { min-height: 100vh; } .hero-content { padding: 15% 7%; } .hero h1 { font-size: 59px; } .actions { align-items: flex-start; flex-direction: column; } .section { padding: 80px 7%; } .intro, .service-grid, .about, .gallery, .contact { grid-template-columns: 1fr; } .service-grid article { border-right: 0; border-bottom: 1px solid var(--line); } .service-grid article:last-child { border-bottom: 0; } .about-photo { min-height: 430px; } .pic { height: 330px; } .contact { gap: 40px; } footer { padding: 25px 7%; flex-direction: column; gap: 12px; } } </style> </head> <body> <!-- ========================== INÍCIO ========================== --> <section id="inicio" class="hero">
+<div class="hero-overlay"></div>
 
-body {
-margin: 0;
-background: #ffffff !important;
-color: var(--ink);
-font-family: 'DM Sans', sans-serif;
-}
+<div class="hero-content">
 
-a {
-text-decoration: none;
-color: inherit;
-}
+  <p class="label">
+    SALÃO DE BELEZA · FORTALEZA
+  </p>
 
-/* ================================
-HEADER
-================================ */
+  <h1>
+    Beleza que<br>
+    <em>marca presença.</em>
+  </h1>
 
-header {
-height: 78px;
-padding: 0 6%;
+  <p class="hero-description">
+    Um espaço para cuidar do seu visual, descobrir seu estilo
+    e viver uma experiência especial.
+  </p>
 
-display: flex;
-align-items: center;
-justify-content: space-between;
+  <div class="actions">
 
-border-bottom: 1px solid var(--line);
+    <a
+      class="btn"
+      href="https://wa.me/5585987355060"
+      target="_blank"
+      rel="noopener"
+    >
+      Agendar pelo WhatsApp
+    </a>
 
-position: sticky;
-top: 0;
+    <a
+      class="under"
+      href="#servicos"
+    >
+      Conheça o Kblos ↓
+    </a>
 
-background: rgba(255, 255, 255, 0.96) !important;
+  </div>
 
-backdrop-filter: blur(12px);
+</div>
 
-z-index: 20;
+</section> <!-- ========================== SERVIÇOS ========================== --> <section id="servicos" class="section">
+<div class="intro">
 
-color: #191612;
-}
+  <div>
 
-.brand {
-font-weight: 600;
-font-size: 26px;
-letter-spacing: 6px;
-color: #191612;
-}
+    <p class="label">
+      NOSSO TRABALHO
+    </p>
 
-nav {
-display: flex;
-gap: 30px;
+    <h2>
+      Seu cuidado.<br>
+      <em>Seu estilo.</em>
+    </h2>
 
-font-size: 12px;
+  </div>
 
-text-transform: uppercase;
+  <p class="intro-text">
+    Mais do que cuidar da sua beleza, queremos que você se sinta
+    bem consigo mesma. Cada detalhe é pensado para valorizar o
+    que há de melhor em você, renovar sua confiança e transformar
+    cada momento de cuidado em uma experiência especial.
+  </p>
 
-letter-spacing: 1.4px;
-}
+</div>
 
-nav a {
-color: #191612;
-}
 
-nav a:hover {
-color: var(--brown);
-}
+<div class="service-grid">
 
-/* ================================
-BOTÕES BRANCOS
-================================ */
+  <article>
 
-.btn {
-display: inline-block;
+    <span>01</span>
 
-background: #ffffff !important;
+    <h3>Manicure</h3>
 
-color: #191612 !important;
+    <p>
+      Cuidados para mãos e unhas com acabamento impecável.
+    </p>
 
-border: 1px solid #191612;
+  </article>
 
-padding: 14px 24px;
 
-text-transform: uppercase;
+  <article>
 
-letter-spacing: 1.2px;
+    <span>02</span>
 
-font-size: 12px;
+    <h3>Estética facial</h3>
 
-transition: 0.2s;
-}
+    <p>
+      Cuidados faciais para renovar e valorizar sua pele.
+    </p>
 
-.btn:hover {
-transform: translateY(-2px);
+  </article>
 
-background: #f5f5f5 !important;
 
-color: #191612 !important;
-}
+  <article>
 
-.mini {
-padding: 11px 17px;
-}
+    <span>03</span>
 
-/* ================================
-HERO
-================================ */
+    <h3>Depilação</h3>
 
-.hero {
-min-height: calc(100vh - 78px);
+    <p>
+      Praticidade e cuidado para uma pele bem cuidada.
+    </p>
 
-position: relative;
+  </article>
 
-background:
-url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=2000&q=85')
-center / cover;
 
-display: flex;
+  <article>
 
-align-items: center;
+    <span>04</span>
 
-color: #ffffff;
-}
+    <h3>Cabelos</h3>
 
-.hero-overlay {
-position: absolute;
+    <p>
+      Cortes, escovas, coloração e finalizações para o seu estilo.
+    </p>
 
-inset: 0;
+  </article>
 
-background: linear-gradient(
-90deg,
-rgba(17, 14, 12, 0.55),
-rgba(17, 14, 12, 0.08)
-);
-}
+</div>
 
-.hero-content {
-position: relative;
+</section> <!-- ========================== SOBRE ========================== --> <section id="sobre" class="about">
+<div class="about-photo"></div>
 
-z-index: 1;
+<div class="about-copy">
 
-padding: 8%;
+  <p class="label">
+    SOBRE O KBLOS
+  </p>
 
-max-width: 800px;
-}
+  <h2>
+    Um momento<br>
+    <em>só seu.</em>
+  </h2>
 
-.label {
-font-size: 10px;
+  <p>
+    O Kblos foi pensado para unir beleza, conforto e atendimento
+    próximo. Aqui, cada visita é uma oportunidade de cuidar de
+    você e sair se sentindo ainda melhor.
+  </p>
 
-letter-spacing: 3px;
+  <p>
+    Venha conhecer nosso espaço em Fortaleza.
+  </p>
 
-font-weight: 600;
+  <a
+    class="btn"
+    href="https://wa.me/5585987355060"
+    target="_blank"
+    rel="noopener"
+  >
+    Falar com o Kblos
+  </a>
 
-margin: 0 0 20px;
-}
+</div>
 
-.hero h1,
-.section h2,
-.about h2,
-.cta h2,
-.contact h2 {
-font-family: 'Playfair Display', serif;
+</section> <!-- ========================== GALERIA ========================== --> <section id="galeria" class="section">
+<div class="center">
 
-font-weight: 500;
+  <p class="label">
+    INSPIRAÇÃO
+  </p>
 
-line-height: 0.98;
+  <h2>
+    Encontre seu<br>
+    <em>próximo visual.</em>
+  </h2>
 
-margin: 0;
-}
+</div>
 
-.hero h1 {
-font-size: clamp(58px, 8vw, 108px);
 
-margin-bottom: 28px;
-}
+<div class="gallery">
 
-.hero h1 em,
-.section h2 em,
-.about h2 em,
-.cta h2 em,
-.contact h2 em {
-font-style: italic;
-}
+  <div class="pic p1">
+    CORTES
+  </div>
 
-.hero-content > p:not(.label) {
-font-size: 18px;
+  <div class="pic p2">
+    TRANSFORMAÇÃO
+  </div>
 
-line-height: 1.6;
+  <div class="pic p3">
+    BELEZA
+  </div>
 
-max-width: 530px;
+</div>
 
-color: #eeeeee;
-}
+</section> <!-- ========================== CTA ========================== --> <section class="cta">
+<p class="label">
+  SEU PRÓXIMO MOMENTO
+</p>
 
-.actions {
-display: flex;
+<h2>
+  Vamos cuidar<br>
+  <em>de você?</em>
+</h2>
 
-gap: 28px;
+<a
+  class="btn"
+  href="https://wa.me/5585987355060"
+  target="_blank"
+  rel="noopener"
+>
+  Agendar horário
+</a>
 
-align-items: center;
+</section> <!-- ========================== CONTATO ========================== --> <section id="contato" class="contact">
+<div>
 
-margin-top: 32px;
-}
+  <p class="label">
+    CONTATO
+  </p>
 
-.under {
-font-size: 12px;
+  <h2>
+    Fale com<br>
+    <em>a gente.</em>
+  </h2>
 
-text-transform: uppercase;
+</div>
 
-letter-spacing: 1.2px;
 
-border-bottom: 1px solid #ffffff;
+<div class="details">
 
-padding-bottom: 4px;
+  <p>
+    <b>WhatsApp</b><br>
 
-color: #ffffff;
-}
+    <a
+      href="https://wa.me/5585987355060"
+      target="_blank"
+      rel="noopener"
+    >
+      (85) 98735-5060
+    </a>
+  </p>
 
-/* ================================
-SEÇÕES BRANCAS
-================================ */
 
-.section {
-padding: 110px 8%;
+  <p>
+    <b>Localização</b><br>
+    Fortaleza — Ceará
+  </p>
 
-background: #ffffff !important;
 
-color: #191612;
-}
+  <p>
+    <b>Atendimento</b><br>
+    Consulte horários e disponibilidade pelo WhatsApp.
+  </p>
 
-.intro {
-display: grid;
+</div>
 
-grid-template-columns: 1fr 1fr;
+</section> <!-- ========================== RODAPÉ ========================== --> <footer>
+<strong>KBLOS</strong>
 
-gap: 40px;
+<span>
+  Salão de Beleza · Fortaleza/CE
+</span>
 
-align-items: end;
-
-margin-bottom: 70px;
-}
-
-.intro h2 {
-font-size: clamp(48px, 6vw, 76px);
-
-color: #191612;
-}
-
-.intro-text {
-font-size: 16px;
-
-line-height: 1.85;
-
-color: #756e66;
-
-max-width: 560px;
-}
-
-/* ================================
-SERVIÇOS
-================================ */
-
-.service-grid {
-display: grid;
-
-grid-template-columns: repeat(4, 1fr);
-
-border: 1px solid var(--line);
-
-background: #ffffff;
-}
-
-.service-grid article {
-padding: 42px 30px;
-
-min-height: 250px;
-
-border-right: 1px solid var(--line);
-
-background: #ffffff !important;
-
-color: #191612;
-}
-
-.service-grid article:nth-child(4) {
-border-right: 0;
-}
-
-.service-grid span {
-color: var(--brown);
-
-font-size: 11px;
-}
-
-.service-grid h3 {
-font-family: 'Playfair Display', serif;
-
-font-size: 31px;
-
-font-weight: 500;
-
-margin: 45px 0 8px;
-
-color: #191612;
-}
-
-.service-grid p {
-color: #756e66;
-
-margin: 0;
-
-line-height: 1.6;
-}
-
-/* ================================
-SOBRE
-================================ */
-
-.about {
-display: grid;
-
-grid-template-columns: 1fr 1fr;
-
-background: #ffffff !important;
-
-color: #191612;
-}
-
-.about-photo {
-min-height: 650px;
-
-background:
-url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1300&q=85')
-center / cover;
-}
-
-.about-copy {
-padding: 11%;
-
-display: flex;
-
-justify-content: center;
-
-flex-direction: column;
-
-background: #ffffff !important;
-
-color: #191612;
-}
-
-.about h2 {
-color: #191612;
-}
-
-.about-copy > p:not(.label) {
-max-width: 520px;
-
-color: #665f57;
-
-line-height: 1.8;
-}
-
-.about-copy .btn {
-align-self: flex-start;
-
-margin-top: 12px;
-}
-
-/* ================================
-GALERIA
-================================ */
-
-.center {
-text-align: center;
-
-margin-bottom: 65px;
-}
-
-.center h2 {
-font-size: clamp(48px, 6vw, 76px);
-
-color: #191612;
-}
-
-.gallery {
-display: grid;
-
-grid-template-columns: 1.15fr 0.9fr 0.9fr;
-
-gap: 14px;
-}
-
-.pic {
-height: 430px;
-
-background-size: cover;
-
-background-position: center;
-
-display: flex;
-
-align-items: flex-end;
-
-padding: 25px;
-
-color: #ffffff;
-
-font-family: 'Playfair Display', serif;
-
-font-size: 27px;
-}
-
-.p1 {
-background-image:
-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.45),
-transparent
-),
-url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1000&q=85');
-}
-
-.p2 {
-background-image:
-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.45),
-transparent
-),
-url('https://images.unsplash.com/photo-1527799820374-dcf8f7e1e9f1?auto=format&fit=crop&w=900&q=85');
-}
-
-.p3 {
-background-image:
-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.45),
-transparent
-),
-url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=85');
-}
-
-/* ================================
-CTA BRANCA
-================================ */
-
-.cta {
-background: #ffffff !important;
-
-color: #191612 !important;
-
-text-align: center;
-
-padding: 120px 8%;
-
-border-top: 1px solid var(--line);
-
-border-bottom: 1px solid var(--line);
-}
-
-.cta h2 {
-font-size: clamp(55px, 7vw, 90px);
-
-margin-bottom: 35px;
-
-color: #191612;
-}
-
-.cta .label {
-color: #756e66;
-}
-
-/* ================================
-CONTATO
-================================ */
-
-.contact {
-padding: 110px 8%;
-
-display: grid;
-
-grid-template-columns: 1fr 1fr;
-
-gap: 80px;
-
-background: #ffffff !important;
-
-color: #191612;
-}
-
-.contact h2 {
-color: #191612;
-}
-
-.details {
-border-top: 1px solid var(--line);
-
-padding-top: 18px;
-
-color: #756e66;
-
-line-height: 1.7;
-}
-
-.details b {
-color: #191612;
-
-font-size: 11px;
-
-letter-spacing: 2px;
-
-text-transform: uppercase;
-}
-
-.details a {
-color: var(--brown);
-}
-
-/* ================================
-FOOTER
-================================ */
-
-footer {
-border-top: 1px solid var(--line);
-
-padding: 28px 8%;
-
-display: flex;
-
-justify-content: space-between;
-
-color: #756e66;
-
-font-size: 12px;
-
-background: #ffffff !important;
-}
-
-footer strong {
-color: #191612;
-
-letter-spacing: 4px;
-}
-
-/* ================================
-CELULAR
-================================ */
-
-@media (max-width: 800px) {
-
-header {
-padding: 0 5%;
-}
-
-nav {
-display: none;
-}
-
-.hero-content {
-padding: 15% 7%;
-}
-
-.hero h1 {
-font-size: 59px;
-}
-
-.actions {
-align-items: flex-start;
-
-flex-direction: column;
-
-
-}
-
-.section {
-padding: 80px 7%;
-}
-
-.intro,
-.service-grid,
-.about,
-.gallery,
-.contact {
-grid-template-columns: 1fr;
-}
-
-.service-grid article {
-border-right: 0;
-
-border-bottom: 1px solid var(--line);
-
-
-}
-
-.service-grid article:last-child {
-border-bottom: 0;
-}
-
-.about-photo {
-min-height: 430px;
-}
-
-.pic {
-height: 330px;
-}
-
-.contact {
-gap: 40px;
-}
-
-footer {
-padding: 25px 7%;
-
-flex-direction: column;
-
-gap: 12px;
-
-
-}
-}
+</footer> </body> </html>
