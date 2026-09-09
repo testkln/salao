@@ -14,27 +14,33 @@
 
 <style>
 
+/* ==================================================
+   PALETA
+================================================== */
+
 :root {
     --off-white: #FAF7F2;
-    --cream: #F2ECE3;
+    --cream: #F3EDE4;
 
     --beige: #E8DDD0;
-    --beige-strong: #C9B6A0;
+    --beige-strong: #B79F87;
 
-    --warm-gray: #8F877D;
-    --warm-gray-light: #C9C0B6;
+    --warm-gray: #6F665D;
+    --warm-gray-light: #A79C91;
 
-    --graphite: #5A554F;
-    --dark: #514B45;
-    --black: #45403B;
+    --graphite: #39342F;
+    --dark: #302C28;
+    --black: #26221F;
 
     --white: #FFFFFF;
 
-    --border: #DCD2C7;
+    --border: #D5C9BC;
 }
 
 
-/* RESET */
+/* ==================================================
+   RESET
+================================================== */
 
 * {
     margin: 0;
@@ -49,9 +55,13 @@ html {
 
 body {
     margin: 0;
+
     background: var(--off-white);
+
     color: var(--graphite);
+
     font-family: "DM Sans", Arial, sans-serif;
+
     overflow-x: hidden;
 }
 
@@ -61,7 +71,9 @@ a {
 }
 
 
-/* HEADER */
+/* ==================================================
+   HEADER
+================================================== */
 
 header {
     width: 100%;
@@ -78,7 +90,7 @@ header {
 
     z-index: 1000;
 
-    background: rgba(250, 247, 242, 0.96);
+    background: rgba(250, 247, 242, 0.97);
 
     backdrop-filter: blur(14px);
 
@@ -117,7 +129,9 @@ nav a:hover {
 }
 
 
-/* BOTÕES */
+/* ==================================================
+   BOTÕES
+================================================== */
 
 .btn {
     display: inline-flex;
@@ -157,7 +171,9 @@ nav a:hover {
 }
 
 
-/* HERO */
+/* ==================================================
+   HERO
+================================================== */
 
 .hero {
     min-height: calc(100vh - 78px);
@@ -173,6 +189,8 @@ nav a:hover {
         center / cover no-repeat;
 
     color: var(--white);
+
+    filter: saturate(1.18);
 }
 
 .hero::after {
@@ -185,9 +203,9 @@ nav a:hover {
     background:
         linear-gradient(
             90deg,
-            rgba(65, 58, 51, .58),
-            rgba(65, 58, 51, .25),
-            rgba(65, 58, 51, .08)
+            rgba(45, 40, 35, .62),
+            rgba(45, 40, 35, .28),
+            rgba(45, 40, 35, .08)
         );
 }
 
@@ -201,12 +219,14 @@ nav a:hover {
     max-width: 900px;
 
     padding: 8%;
+
+    filter: none;
 }
 
 .hero-label {
     margin-bottom: 22px;
 
-    color: #F4EFE8;
+    color: #FFFFFF;
 
     font-size: 10px;
 
@@ -238,7 +258,7 @@ nav a:hover {
 
     margin-bottom: 34px;
 
-    color: #F4F0EA;
+    color: #FFFFFF;
 
     font-size: 18px;
 
@@ -282,7 +302,9 @@ nav a:hover {
 }
 
 
-/* SEÇÕES */
+/* ==================================================
+   SEÇÕES
+================================================== */
 
 .section {
     padding: 115px 8%;
@@ -349,7 +371,9 @@ nav a:hover {
 }
 
 
-/* SERVIÇOS */
+/* ==================================================
+   SERVIÇOS
+================================================== */
 
 .services-section {
     background: var(--cream);
@@ -414,7 +438,9 @@ nav a:hover {
 }
 
 
-/* SOBRE */
+/* ==================================================
+   SOBRE
+================================================== */
 
 .about {
     display: grid;
@@ -430,6 +456,8 @@ nav a:hover {
     background:
         url("https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1300&q=85")
         center / cover no-repeat;
+
+    filter: saturate(1.18);
 }
 
 .about-content {
@@ -441,7 +469,7 @@ nav a:hover {
 
     justify-content: center;
 
-    background: var(--beige);
+    background: var(--cream);
 }
 
 .about h2 {
@@ -469,7 +497,9 @@ nav a:hover {
 }
 
 
-/* GALERIA */
+/* ==================================================
+   GALERIA
+================================================== */
 
 .gallery-section {
     background: var(--off-white);
@@ -517,6 +547,8 @@ nav a:hover {
     background-size: cover;
 
     background-position: center;
+
+    filter: saturate(1.22);
 }
 
 .gallery-item::after {
@@ -529,7 +561,7 @@ nav a:hover {
     background:
         linear-gradient(
             to top,
-            rgba(65, 58, 51, .45),
+            rgba(45, 40, 35, .45),
             transparent 55%
         );
 }
@@ -540,6 +572,8 @@ nav a:hover {
     z-index: 2;
 
     color: #FFFFFF;
+
+    filter: none;
 }
 
 .gallery-1 {
@@ -558,14 +592,16 @@ nav a:hover {
 }
 
 
-/* CTA */
+/* ==================================================
+   CTA — CREME
+================================================== */
 
 .cta {
     padding: 125px 8%;
 
     text-align: center;
 
-    background: var(--beige);
+    background: var(--cream);
 
     color: var(--graphite);
 
@@ -585,7 +621,7 @@ nav a:hover {
 }
 
 .cta h2 em {
-    color: var(--beige-strong);
+    color: #9D856D;
 }
 
 .cta .btn {
@@ -603,7 +639,9 @@ nav a:hover {
 }
 
 
-/* CONTATO */
+/* ==================================================
+   CONTATO
+================================================== */
 
 .contact {
     padding: 115px 8%;
@@ -619,6 +657,8 @@ nav a:hover {
 
 .contact h2 {
     font-size: clamp(48px, 5.5vw, 75px);
+
+    color: var(--graphite);
 }
 
 .contact-details {
@@ -654,7 +694,9 @@ nav a:hover {
 }
 
 
-/* FOOTER */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer {
     padding: 30px 8%;
@@ -665,9 +707,9 @@ footer {
 
     justify-content: space-between;
 
-    background: #D8CABC;
+    background: var(--beige);
 
-    color: #746B62;
+    color: #665D55;
 
     font-size: 12px;
 }
@@ -679,7 +721,9 @@ footer strong {
 }
 
 
-/* MOBILE */
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 800px) {
 
@@ -774,6 +818,7 @@ footer strong {
 
         gap: 12px;
     }
+
 }
 
 </style>
@@ -783,7 +828,9 @@ footer strong {
 <body>
 
 
-<!-- HEADER -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header>
 
@@ -823,7 +870,9 @@ footer strong {
 </header>
 
 
-<!-- HERO -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section id="inicio" class="hero">
 
@@ -868,7 +917,9 @@ footer strong {
 </section>
 
 
-<!-- SERVIÇOS -->
+<!-- ==================================================
+     SERVIÇOS
+================================================== -->
 
 <section id="servicos" class="section services-section">
 
@@ -971,7 +1022,9 @@ footer strong {
 </section>
 
 
-<!-- SOBRE -->
+<!-- ==================================================
+     SOBRE
+================================================== -->
 
 <section id="sobre" class="about">
 
@@ -1016,7 +1069,9 @@ footer strong {
 </section>
 
 
-<!-- GALERIA -->
+<!-- ==================================================
+     GALERIA
+================================================== -->
 
 <section id="galeria" class="section gallery-section">
 
@@ -1067,7 +1122,9 @@ footer strong {
 </section>
 
 
-<!-- CTA -->
+<!-- ==================================================
+     CTA
+================================================== -->
 
 <section class="cta">
 
@@ -1092,7 +1149,9 @@ footer strong {
 </section>
 
 
-<!-- CONTATO -->
+<!-- ==================================================
+     CONTATO
+================================================== -->
 
 <section id="contato" class="contact">
 
@@ -1161,7 +1220,9 @@ footer strong {
 </section>
 
 
-<!-- FOOTER -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
